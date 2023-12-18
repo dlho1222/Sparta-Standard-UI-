@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_ScreenShare"
+        android:icon="@drawable/screenshare"
+        android:title="화면공유"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_Bell"
+        android:icon="@drawable/bell"
+        android:title="알림"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_Search"
+        android:icon="@drawable/search"
+        android:title="검색"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="0dp"
@@ -19,17 +20,18 @@
             <ImageView
                 android:id="@+id/iv_Sponsor"
                 android:layout_width="0dp"
-                android:layout_height="400dp"
-                android:src="@drawable/android_original"
+                android:layout_height="300dp"
+                android:src="@drawable/subscribe"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1.0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/iv_Speaker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:src="@drawable/speaker_off"
@@ -38,22 +40,22 @@
 
             <ImageView
                 android:id="@+id/iv_subTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="24dp"
                 android:src="@drawable/subtitle_off"
                 app:layout_constraintEnd_toEndOf="@id/iv_Speaker"
                 app:layout_constraintTop_toBottomOf="@id/iv_Speaker" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/sponsorLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/frame_layout"
-        >
+        app:layout_constraintTop_toBottomOf="@id/frame_layout">
 
         <ImageView
             android:id="@+id/youtube_logo"
@@ -68,17 +70,17 @@
             app:layout_constraintVertical_bias="0" />
 
         <TextView
-            app:layout_constraintVertical_bias="0"
             android:id="@+id/tv_Text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="세찬아 혹시 너 13을 몰랐어? 이제는 한문으로 웃기는 깡깡이"
+            android:text="[23/24시즌 리그1] 17R 파리 생제르멩 vs 메스3 분하이라이트"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_kebab"
             app:layout_constraintStart_toEndOf="@id/youtube_logo"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
 
         <LinearLayout
             android:id="@+id/textLayout"
@@ -95,8 +97,8 @@
                 android:layout_height="wrap_content"
                 android:alpha="0.7"
                 android:gravity="start"
-                android:text="런닝맨· 스브스 공식 채널 조회수 200만회 · 4개월 전"
-                android:textSize="18sp"
+                android:text="쿠팡플레이 스포츠· 조회수 35만회 · 4시간 전"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/tv_Text"
                 app:layout_constraintStart_toStartOf="@id/tv_Text"

@@ -4,18 +4,18 @@
     <item
         android:id="@+id/action_ScreenShare"
         android:icon="@drawable/screenshare"
-        android:title="화면공유"
+        android:title="@string/Action_ScreenShare_Title"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_Bell"
         android:icon="@drawable/bell"
-        android:title="알림"
+        android:title="@string/Action_Bell_Title"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_Search"
         android:icon="@drawable/search"
-        android:title="검색"
+        android:title="@string/Action_Search_Title"
         app:showAsAction="ifRoom" />
 
 </menu>

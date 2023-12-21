@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">youtubeUI</string>
+    <string name="Action_Home_Title">홈</string>
+    <string name="Action_Shorts_Title">쇼츠</string>
+    <string name="Action_Subscribe_Title">구독</string>
+    <string name="Action_My_Title">나</string>
+    <string name="Action_ScreenShare_Title">화면공유</string>
+    <string name="Action_Bell_Title">알림</string>
+    <string name="Action_Search_Title">검색</string>
+    <string name="Button_Watch_Text">시청</string>
+    <string name="Button_SingUp_Text">무료가입</string>
+    <string name="LoadImageText">이미지 가져오기</string>
 </resources>

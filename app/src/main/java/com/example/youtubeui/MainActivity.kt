@@ -6,17 +6,15 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import androidx.core.view.children
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.youtubeui.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.chip.Chip
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var imageAdapter: ImageAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,10 +28,30 @@ class MainActivity : AppCompatActivity() {
         }
         supportActionBar?.setLogo(R.drawable.logo)
         initViews()
-
+        initRecyclerView()
 
     }
 
+    private fun initRecyclerView() {
+        imageAdapter = ImageAdapter(object : OnClickListener {
+            override fun onSpeakerClicked() {
+                Toast.makeText(baseContext, "스피커on", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onSubTitleClicked() {
+                Toast.makeText(baseContext, "자막on", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onVodClicked() {
+                showDetailInfoDialog()
+            }
+        })
+        binding.recyclerView.apply {
+            adapter = imageAdapter
+            layoutManager =
+                LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
+        }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
@@ -67,7 +85,7 @@ class MainActivity : AppCompatActivity() {
             setText(text)
             isClickable = true
             isCheckable = true
-            background = ContextCompat.getDrawable(context,R.drawable.bg_chipgroup)
+            background = ContextCompat.getDrawable(context, R.drawable.bg_chipgroup)
         }
     }
 
@@ -83,4 +101,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun showDetailInfoDialog() {
+        AlertDialog.Builder(this).apply {
+            setMessage("유튜브 영상")
+            setPositiveButton("확인") { _, _ -> }
+            show()
+        }
+
+    }
 }

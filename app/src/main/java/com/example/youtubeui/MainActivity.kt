@@ -24,34 +24,67 @@ class MainActivity : AppCompatActivity() {
         }
         binding.bottomNavi.apply {
             itemIconTintList = null
-
         }
-        supportActionBar?.setLogo(R.drawable.logo)
         initViews()
-        initRecyclerView()
+        //initRecyclerView()
 
-    }
 
-    private fun initRecyclerView() {
-        imageAdapter = ImageAdapter(object : OnClickListener {
-            override fun onSpeakerClicked() {
-                Toast.makeText(baseContext, "스피커on", Toast.LENGTH_SHORT).show()
+        binding.bottomNavi.setOnItemSelectedListener {
+            when (it.itemId) {
+                //홈 프래그먼트
+                R.id.action_Home -> {
+                    //initRecyclerView()
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.container, HomeFragment())
+                        commit()
+                    }
+                    true
+                }
+                //쇼츠 프래그먼트
+                R.id.action_Shorts -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.container, ShortsFragment())
+                        commit()
+                    }
+                    true
+                }
+                //구독 프래그먼트
+                R.id.action_Subscribe -> {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.container, SubscribeFragment())
+                        commit()
+                    }
+                    true
+                }
+
+                else -> {
+                    false
+                }
             }
 
-            override fun onSubTitleClicked() {
-                Toast.makeText(baseContext, "자막on", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onVodClicked() {
-                showDetailInfoDialog()
-            }
-        })
-        binding.recyclerView.apply {
-            adapter = imageAdapter
-            layoutManager =
-                LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
         }
     }
+
+//    private fun initRecyclerView() {
+//        imageAdapter = ImageAdapter(object : OnClickListener {
+//            override fun onSpeakerClicked() {
+//                Toast.makeText(baseContext, "스피커on", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onSubTitleClicked() {
+//                Toast.makeText(baseContext, "자막on", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onVodClicked() {
+//                showDetailInfoDialog()
+//            }
+//        })
+//        binding.recyclerView.apply {
+//            adapter = imageAdapter
+//            layoutManager =
+//                LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
+//        }
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
@@ -78,6 +111,11 @@ class MainActivity : AppCompatActivity() {
         topIndex.forEach { text ->
             binding.chipGroup.addView(createChip(text))
         }
+        //초기화면 셋팅
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.container, HomeFragment())
+            commit()
+        }
     }
 
     private fun createChip(text: String): Chip {
@@ -85,7 +123,6 @@ class MainActivity : AppCompatActivity() {
             setText(text)
             isClickable = true
             isCheckable = true
-            background = ContextCompat.getDrawable(context, R.drawable.bg_chipgroup)
         }
     }
 
@@ -101,12 +138,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun showDetailInfoDialog() {
-        AlertDialog.Builder(this).apply {
-            setMessage("유튜브 영상")
-            setPositiveButton("확인") { _, _ -> }
-            show()
-        }
-
-    }
+//    private fun showDetailInfoDialog() {
+//        AlertDialog.Builder(this).apply {
+//            setMessage("유튜브 영상")
+//            setPositiveButton("확인") { _, _ -> }
+//            show()
+//        }
+//    }
 }

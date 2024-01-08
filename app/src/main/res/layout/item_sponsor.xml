@@ -19,7 +19,6 @@
             android:layout_height="match_parent">
 
             <ImageView
-
                 android:id="@+id/iv_Sponsor"
                 android:layout_width="0dp"
                 android:layout_height="400dp"

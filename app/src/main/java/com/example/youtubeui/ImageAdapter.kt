@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.youtubeui.ImageAdapter.Companion.ITEM_SPONSOR
 import com.example.youtubeui.databinding.ItemSponsorBinding
 import com.example.youtubeui.databinding.ItemVod2Binding
 import com.example.youtubeui.databinding.ItemVodBinding

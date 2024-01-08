@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                         replace(R.id.container, ShortsFragment())
                         commit()
                     }
+
                     true
                 }
                 //구독 프래그먼트

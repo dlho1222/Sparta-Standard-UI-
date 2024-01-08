@@ -2,17 +2,188 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <TextView
-        android:id="@+id/tv_Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shorts 화면"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/iv_Background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/background"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        />
+    <ImageView
+        android:id="@+id/iv_Search"
+        style="@style/IconStyle"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/shorts_search"
+        app:layout_constraintEnd_toStartOf="@id/iv_Kebob"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iv_Kebob"
+        style="@style/IconStyle"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/kebob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_Like"
+        style="@style/IconStyle"
+        android:src="@drawable/like"
+        app:layout_constraintBottom_toTopOf="@id/tv_Like"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+
+        android:id="@+id/tv_Like"
+        style="@style/TextStyle"
+        android:text="좋아요"
+        app:layout_constraintBottom_toTopOf="@id/iv_Hate" />
+
+    <ImageView
+        android:id="@+id/iv_Hate"
+        style="@style/IconStyle"
+        android:src="@drawable/hate"
+        app:layout_constraintBottom_toTopOf="@id/tv_Hate" />
+
+    <TextView
+        android:id="@+id/tv_Hate"
+        style="@style/TextStyle"
+        android:text="싫어요"
+        app:layout_constraintBottom_toTopOf="@id/iv_Comment" />
+
+    <ImageView
+        android:id="@+id/iv_Comment"
+        style="@style/IconStyle"
+        android:src="@drawable/comment"
+        app:layout_constraintBottom_toTopOf="@id/tv_Comment" />
+
+    <TextView
+        android:id="@+id/tv_Comment"
+        style="@style/TextStyle"
+        android:text="3.5천"
+        app:layout_constraintBottom_toTopOf="@id/iv_Share" />
+
+    <ImageView
+        android:id="@+id/iv_Share"
+        style="@style/IconStyle"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toTopOf="@id/tv_Share" />
+
+    <TextView
+        android:id="@+id/tv_Share"
+        style="@style/TextStyle"
+        android:text="공유"
+        app:layout_constraintBottom_toTopOf="@id/iv_Remix" />
+
+    <ImageView
+        android:id="@+id/iv_Remix"
+        style="@style/IconStyle"
+        android:src="@drawable/remix"
+        app:layout_constraintBottom_toTopOf="@id/tv_Remix" />
+
+    <TextView
+        android:id="@+id/tv_Remix"
+        style="@style/TextStyle"
+        android:text="리믹스"
+        app:layout_constraintBottom_toTopOf="@id/iv_Profile_Box" />
+
+    <ImageView
+        android:id="@+id/iv_Profile_Box"
+        style="@style/IconStyle"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/android_original"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_Profile_Ring"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/android_original"
+        app:layout_constraintBottom_toTopOf="@id/iv_play"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="\@Oyff"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_Profile_Ring"
+        app:layout_constraintStart_toEndOf="@id/iv_Profile_Ring"
+        app:layout_constraintTop_toTopOf="@id/iv_Profile_Ring" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Subscribe"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_subscribe_button"
+        android:text="구독"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tv_id"
+        app:layout_constraintStart_toEndOf="@id/tv_id"
+        app:layout_constraintTop_toTopOf="@id/tv_id" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toTopOf="@id/tv_SubTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lore accuate Link vs Lynel"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/iv_play"
+        app:layout_constraintStart_toEndOf="@id/iv_play"
+        app:layout_constraintTop_toTopOf="@id/iv_play" />
+
+    <TextView
+        android:id="@+id/tv_SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="15dp"
+        android:text="Lore accurate Link vs Lynel (Part.2)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/iv_Note"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_Note"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="오리지널 사운드"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_Note"
+        app:layout_constraintStart_toEndOf="@id/iv_Note"
+        app:layout_constraintTop_toTopOf="@id/iv_Note" />
 </androidx.constraintlayout.widget.ConstraintLayout>

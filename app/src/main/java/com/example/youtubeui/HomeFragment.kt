@@ -8,24 +8,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.youtubeui.databinding.FragmentRecyclerviewBinding
+import com.example.youtubeui.databinding.FragmentHomeBinding
 
 class HomeFragment :Fragment(){
-    private lateinit var binding : FragmentRecyclerviewBinding
+    private lateinit var binding : FragmentHomeBinding
     private lateinit var imageAdapter: ImageAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRecyclerviewBinding.inflate(inflater)
+        binding = FragmentHomeBinding.inflate(inflater)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
+
     }
     private fun initRecyclerView() {
         imageAdapter = ImageAdapter(object : OnClickListener {
@@ -54,4 +56,5 @@ class HomeFragment :Fragment(){
             show()
         }
     }
+
 }

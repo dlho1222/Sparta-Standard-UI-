@@ -42,7 +42,7 @@
 
         android:id="@+id/tv_Like"
         style="@style/TextStyle"
-        android:text="좋아요"
+        android:text="@string/Shorts_Like"
         app:layout_constraintBottom_toTopOf="@id/iv_Hate" />
 
     <ImageView
@@ -54,7 +54,7 @@
     <TextView
         android:id="@+id/tv_Hate"
         style="@style/TextStyle"
-        android:text="싫어요"
+        android:text="@string/Shorts_Hate"
         app:layout_constraintBottom_toTopOf="@id/iv_Comment" />
 
     <ImageView
@@ -66,7 +66,7 @@
     <TextView
         android:id="@+id/tv_Comment"
         style="@style/TextStyle"
-        android:text="3.5천"
+        android:text="@string/Shorts_Comment"
         app:layout_constraintBottom_toTopOf="@id/iv_Share" />
 
     <ImageView
@@ -78,7 +78,7 @@
     <TextView
         android:id="@+id/tv_Share"
         style="@style/TextStyle"
-        android:text="공유"
+        android:text="@string/Shorts_Share"
         app:layout_constraintBottom_toTopOf="@id/iv_Remix" />
 
     <ImageView
@@ -90,7 +90,7 @@
     <TextView
         android:id="@+id/tv_Remix"
         style="@style/TextStyle"
-        android:text="리믹스"
+        android:text="@string/Shorts_Remix"
         app:layout_constraintBottom_toTopOf="@id/iv_Profile_Box" />
 
     <ImageView
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="\@Oyff"
+        android:text="@string/Shorts_ID"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_Profile_Ring"
@@ -128,7 +128,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/bg_subscribe_button"
-        android:text="구독"
+        android:text="@string/Shorts_Subscribe"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/tv_id"
         app:layout_constraintStart_toEndOf="@id/tv_id"
@@ -148,7 +148,7 @@
         android:id="@+id/tv_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lore accuate Link vs Lynel"
+        android:text="@string/Shorts_Subtitle"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/iv_play"
         app:layout_constraintStart_toEndOf="@id/iv_play"
@@ -160,7 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
-        android:text="Lore accurate Link vs Lynel (Part.2)"
+        android:text="@string/Shorts_Title"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/iv_Note"
@@ -180,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
-        android:text="오리지널 사운드"
+        android:text="@string/OriginalSound"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/iv_Note"

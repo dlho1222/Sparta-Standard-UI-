@@ -10,4 +10,25 @@
     <string name="Button_Watch_Text">시청</string>
     <string name="Button_SingUp_Text">무료가입</string>
     <string name="LoadImageText">이미지 가져오기</string>
+    <string name="Subscribe_Title_Text">새로운 동영상을 놓치지 마세요.</string>
+    <string name="Subscribe_Subtitle_Text">즐겨찾는 YouTube 채널의 업데이트를 확인하려면 로그인하세요.</string>
+    <string name="Subscribe_Login_Text">로그인</string>
+    <string name="Shorts_Like">좋아요</string>
+    <string name="Shorts_Hate">싫어요</string>
+    <string name="Shorts_Comment">3.5천</string>
+    <string name="Shorts_Share">공유</string>
+    <string name="Shorts_Remix">리믹스</string>
+    <string name="Shorts_ID">\@Oyff</string>
+    <string name="Shorts_Subscribe">구독</string>
+    <string name="Shorts_Subtitle">Lore accuate Link vs Lynel</string>
+    <string name="Shorts_Title">Lore accurate Link vs Lynel (Part.2)</string>
+    <string name="OriginalSound">오리지널 사운드</string>
+    <string name="SponsorItem_Title">YouTube Premium에서 광고로 인한 끊김 없이 동영상과 음악을 모두 즐기세요</string>
+    <string name="SponsorItem_Text">끊김 없는 동영상과 음악 전용 혜택</string>
+    <string name="SponsorItem_Text2">스폰서 ·</string>
+    <string name="SponsorItem_Text3">YouTube</string>
+    <string name="VodItem_Title">[23/24시즌 리그1] 17R 파리 생제르멩 vs 메스3 분하이라이트</string>
+    <string name="VodItem_Text">쿠팡플레이 스포츠· 조회수 35만회 · 4시간 전</string>
+    <string name="Vod2Item_Title">세찬아 혹시 너 13을 몰랐어? 이제는 한문으로 웃기는 깡깡이</string>
+    <string name="Vod2Item_Text">런닝맨· 스브스 공식 채널 조회수 200만회 · 4개월 전</string>
 </resources>

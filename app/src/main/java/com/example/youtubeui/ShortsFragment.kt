@@ -12,7 +12,7 @@ import com.example.youtubeui.databinding.FramentShortsBinding
 import com.google.android.material.chip.ChipGroup
 
 class ShortsFragment : Fragment() {
-    private lateinit var binding : FramentShortsBinding
+    private lateinit var binding: FramentShortsBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,11 +26,12 @@ class ShortsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Glide.with(this).load(R.drawable.background).into(binding.ivBackground)
     }
+
     override fun onStart() {
         super.onStart()
         //toolbar , chipgroup 안보이게
         (activity as AppCompatActivity).supportActionBar?.hide()
-        activity?.findViewById<ChipGroup>(R.id.chipGroup).let { chipGroup->
+        activity?.findViewById<ChipGroup>(R.id.chipGroup).let { chipGroup ->
             chipGroup?.isVisible = false
         }
     }
